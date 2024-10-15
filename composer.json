@@ -24,11 +24,11 @@
     "extra": {
         "flarum-extension": {
             "title": "Attached Posts",
-            "category": "",
+            "category": "feature",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-paperclip",
+                "color": "#fff",
+                "backgroundColor": "#004d40"
             }
         },
         "flarum-cli": {
