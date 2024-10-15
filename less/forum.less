@@ -1,0 +1,68 @@
+.AttachContainer {
+    .CommentPost {
+        background: #90caf93c;
+        color: var(--text-color);
+        padding: 8px 12px;
+        border-radius: var(--border-radius);
+        margin-bottom: 5px;
+        position: relative;
+
+        .Post-header {
+            .AttachTitle {
+                color: var(--text-color);
+                font-weight: bold;
+                cursor: pointer;
+                i{
+                    margin-right: 5px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+        .attached-post {
+            &.truncate {
+                max-height: ~"calc(var(--post-body-lh, 1.7em) * var(--max-lines, 10))";
+
+                &::after {
+                    background: linear-gradient(180deg, #000 60%, transparent);
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 60px;
+                }
+
+                text-overflow: ellipsis;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .Post-body-wrapper {
+                width: 100%;
+                height: max-content;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .attached-posts-delete {
+            position: absolute;
+            right: 10px;
+            top: 6px;
+        }
+    }
+
+
+    .AttachContainer-select {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background: #90caf93c;
+        color: var(--text-color);
+        padding: 8px 12px;
+        border-radius: var(--border-radius);
+    }
+}

@@ -1,0 +1,15 @@
+xypp-attached-posts:
+  forum:
+    attachTo: 贴附到
+    attach: 贴附到这个帖子
+    attach-btn: 贴
+    attached: 贴附的帖子
+    show-more: 展开
+    show-less: 收起
+    delete: 删除
+  admin:
+    permissions:
+      use: 贴附帖子
+      moderate: 管理其他人贴附的帖子
+    settings:
+      max-lines: 预览最大行数

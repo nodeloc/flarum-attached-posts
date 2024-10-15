@@ -1,0 +1,15 @@
+xypp-attached-posts:
+  forum:
+    attachTo: Attach to
+    attach: Attach to this post.
+    attach-btn: Attach
+    attached: Attached Post
+    show-more: Show more
+    show-less: Show less
+    delete: Delete
+  admin:
+    permissions:
+      use: Attach a post
+      moderate: Moderate attached post by other user
+    settings:
+      max-lines: Maximum lines to show
