@@ -25,22 +25,24 @@ export default class AttachContainer extends Component<{
         const attached = this.attrs.post.attached_posts();
         return (
             <div className="AttachContainer">
-                {
-                    (attached && attached.length) ?
-                        attached.map(p => <AttachedPostPreviewer post={p} parentPost={this.attrs.post} ></AttachedPostPreviewer>)
-                        :
-                        ""
-                }
-                {
-                    (selectForTarget && selectForTarget != this.attrs.post.id()) ? (
-                        <div className="AttachContainer-select">
-                            <span>
-                                {app.translator.trans("xypp-attached-posts.forum.attach")}
-                            </span>
-                            <Button onclick={this.attachToCurrent.bind(this)} className='Button Button--primary'>{app.translator.trans("xypp-attached-posts.forum.attach-btn")}</Button>
-                        </div>
-                    ) : ""
-                }
+                <ul class="list-unstyled">
+                    {
+                        (attached && attached.length) ?
+                            attached.map(p => <AttachedPostPreviewer post={p} parentPost={this.attrs.post} ></AttachedPostPreviewer>)
+                            :
+                            ""
+                    }
+                    {
+                        (selectForTarget && selectForTarget != this.attrs.post.id()) ? (
+                            <div className="AttachContainer-select">
+                                <span>
+                                    {app.translator.trans("xypp-attached-posts.forum.attach")}
+                                </span>
+                                <Button onclick={this.attachToCurrent.bind(this)} className='Button Button--primary'>{app.translator.trans("xypp-attached-posts.forum.attach-btn")}</Button>
+                            </div>
+                        ) : ""
+                    }
+                </ul>
             </div>
         );
     }
